@@ -38,8 +38,8 @@ Installation Instructions
 
     Clone the Repository: Download or clone the repository to your local machine.
 
-git clone https://github.com/NullSec8/WiPwn.git
-cd WiPwn
+git clone https://github.com/NullSec8/-WiPwn-WiFi-Cracker.git
+cd -WiPwn-WiFi-Cracker
 
 Install Dependencies: Make sure you have all necessary Python libraries installed.
 
