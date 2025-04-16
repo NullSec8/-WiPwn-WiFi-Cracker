@@ -1,144 +1,109 @@
+⚡️ WiPwn – WiFi Cracking Tool
 
-WiPwn - WiFi Cracking Tool
+WiFi Cracking TOol for Educational WiFi Pentesting
 
-WiPwn is a powerful, user-friendly WiFi penetration testing tool that helps you scan, brute-force, and generate custom wordlists for cracking WiFi networks. It is designed exclusively for educational purposes and is intended to be used in environments where you have explicit permission, such as your own networks or test labs. This project is created by NullSec8 and should never be used on any network without permission.
+WiPwn is a powerful, interactive, and educational tool for WiFi network penetration testing. It allows you to scan for networks, brute-force passwords, and generate custom wordlists. Created by NullSec8, strictly for ethical hacking, educational purposes, and controlled environments (your own network or authorized test labs).
+⚠️ Legal Disclaimer
 
-⚠️ Important Warning:
-NullSec8, the creator of this tool, absolutely condemns any malicious use of this tool. The goal of this project is to help you learn more about WiFi security, penetration testing, and brute-forcing methods in a controlled, legal, and ethical environment. Using this tool to attack networks without consent is illegal and unethical.
-Features
+    ❌ Do NOT use this tool on networks you don't own or don't have explicit permission to test.
+    🔒 The creator takes no responsibility for misuse. This is a tool for learning and research only.
 
-    Scan for WiFi Networks: Discover available networks along with their security types (WPA/WPA2).
+  Project Goals
 
-    Brute-force Attack: Crack WiFi passwords using either a custom wordlist or by generating all possible password combinations.
+    Educate on WiFi network security
 
-    Generate Custom Wordlist: Create a wordlist tailored to the SSID (WiFi network name) with common prefixes, suffixes, and special characters.
+    Learn password cracking methods (wordlist and full brute-force)
 
-    Clear Saved WiFi Profiles: Delete saved WiFi profiles from your system to maintain privacy or cleanup after tests.
+    Practice ethical hacking in a legal, controlled setting
 
-    Cross-Platform Compatibility: Works on Linux and Windows, with Windows having some limitations.
+    Use in virtual labs, personal routers, or authorized testbeds
 
-Requirements
-Prerequisites
+🔧 Features
 
-    Python 3.x: Ensure that Python 3.x is installed on your system. You can download it from Python's official website.
+    📡 Scan WiFi Networks – Detects nearby networks, their SSIDs, and security types
 
-    Dependencies: The following Python packages are required:
+    🧠 Brute-force Using Wordlist – Use your own or default wordlists to attempt password cracking
 
-        pywifi — A library for interacting with wireless interfaces.
+    🛠️ Generate Custom Wordlists – Create targeted lists based on SSID patterns, prefixes/suffixes, etc.
 
-        pyfiglet — For ASCII art banners.
+    🔓 Brute-force Without Wordlist – Try all possible character combinations (slow but thorough)
 
-        termcolor — To add color to terminal outputs.
+    🧹 Clear Saved WiFi Profiles – Wipe stored WiFi profiles from your system for privacy
 
-To install the required dependencies, run:
+    🖥️ Cross-platform – Works on Linux and Windows (Linux recommended for full features)
 
-pip install pywifi pyfiglet termcolor
+⚙️ Requirements
 
-Installation Instructions
+    Python 3.x
 
-    Clone the Repository: Download or clone the repository to your local machine.
+    Python modules:
+
+    pip install pywifi pyfiglet termcolor
+
+📥 Installation
 
 git clone https://github.com/NullSec8/-WiPwn-WiFi-Cracker.git
 cd -WiPwn-WiFi-Cracker
+pip install -r requirements.txt
 
-Install Dependencies: Make sure you have all necessary Python libraries installed.
+🪟 Windows Notes
 
-    pip install -r requirements.txt
+    Install Npcap or WinPcap to enable WiFi scanning
 
-Running on Windows
+    Run your terminal as Administrator
 
-WiPwn can work on Windows, but be aware that some features may be limited because of the way PyWiFi interacts with wireless adapters on this platform. For a smoother experience, we recommend running the tool on Linux or macOS.
-Important Notes for Windows Users:
+    Some features may be limited due to PyWiFi constraints
 
-    Npcap/WinPcap: To enable network monitoring functionality, install Npcap or WinPcap. These are libraries that allow network packet capturing:
+    Linux or Kali Linux is highly recommended
 
-        Download Npcap
+🚀 Usage
 
-        Download WinPcap
-
-    Run as Administrator: Ensure that you run your terminal or command prompt as Administrator to perform certain actions like scanning networks or clearing saved profiles.
-
-    WiFi Interface: PyWiFi's support for WiFi interfaces on Windows is limited. Some operations, especially WiFi scanning, may not work as expected. For best results, consider using a Linux system.
-
-How to Use
-1. Scan for WiFi Networks
-
-    Select this option to scan for nearby WiFi networks. The available networks will be displayed, showing their SSID (network name), security type (WPA/WPA2), and channel.
-
-[1] Scan for networks
-
-2. Brute-force a Network Using a Wordlist
-
-    If you already have a wordlist (a file containing potential passwords), this option allows you to perform a brute-force attack on a network to try all passwords from the wordlist.
-
-[2] Bruteforce a network with wordlist
-
-3. Generate a Custom Wordlist
-
-    This option generates a custom wordlist for cracking a network, using the network's SSID as the base and appending common prefixes, suffixes, and special characters.
-
-[3] Generate wordlist for target
-
-4. Brute-force Without a Wordlist (Try All Combinations)
-
-    If you don't have a wordlist, this option tries all possible combinations of characters (up to a certain length) to guess the WiFi password.
-
-[4] Bruteforce without wordlist (try all combinations)
-
-5. Clear Saved WiFi Profiles
-
-    Deletes all saved WiFi profiles from your system, which can help you clean up after testing or ensure privacy.
-
-[5] Clear saved WiFi profiles
-
-6. Exit
-
-    Exit the program.
-
-Example Usage
-Step 1: Run the Program
-
-Execute the script by running:
+    Run the Tool
 
 python wipwn.py
 
-Step 2: Choose an Option
+Select an Option
 
-You will be presented with a simple, interactive menu:
+    [1] Scan for networks  
+    [2] Bruteforce a network with wordlist  
+    [3] Generate wordlist for target  
+    [4] Bruteforce without wordlist (all combinations)  
+    [5] Clear saved WiFi profiles  
+    [6] Exit
 
-[1] Scan for networks
-[2] Bruteforce a network with wordlist
-[3] Generate wordlist for target
-[4] Bruteforce without wordlist (try all combinations)
-[5] Clear saved WiFi profiles
-[6] Exit
+    Perform the Action
 
-Step 3: Interact
+        Choose your target
 
-    To scan for WiFi networks, select option 1.
+        Launch attack or generate wordlist
 
-    To crack a network with a wordlist, select option 2.
+        Analyze results
 
-    To generate a custom wordlist, select option 3.
+🧪 Example Use
 
-    To try all combinations for cracking, select option 4.
+Scan networks
 
-    To clear all saved WiFi profiles, select option 5.
+Choose [1] to view available SSIDs
 
-Step 4: Exit the Program
+Brute-force with a custom wordlist
 
-Once done, you can exit the program by selecting option 6.
-Troubleshooting
-Common Issues
+Choose [2], input SSID and path to your wordlist
 
-    WiFi Interface Not Detected: If your WiFi adapter isn't being recognized, ensure that it's properly connected and that you have Npcap or WinPcap installed on Windows.
+Create a targeted wordlist
 
-    Administrator Privileges: On Windows, some actions (like scanning networks or clearing profiles) may require Administrator rights. Make sure to run your terminal or command prompt as Administrator.
+Choose [3], enter SSID, and let the script generate combinations
 
-    Slow Brute-Force: Brute-forcing without a wordlist can be slow due to the number of possible combinations. It is recommended to use a wordlist for faster attacks.
+🧠 Troubleshooting
 
-Windows Limitations
+    WiFi Adapter Not Found: Make sure it supports monitor mode and is recognized by PyWiFi
 
-    PyWiFi's support for WiFi interfaces on Windows is limited, which may prevent certain features from working. Linux is recommended for full functionality.
+    Admin Rights Needed: Run terminal as Administrator on Windows
 
-    Windows users may need to experiment with Npcap and WinPcap to get the best results.
+    Slow Cracking: Brute-force without a wordlist is intensive – use only for short tests
+
+    Windows Limitations: Use Linux for best compatibility and performance
+
+🔐 License
+
+This project is licensed under the MIT License.
+You are free to use, modify, and distribute — as long as it’s for educational, non-malicious purposes.
